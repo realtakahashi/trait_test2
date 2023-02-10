@@ -22,7 +22,7 @@ mod flipper {
         /// Stores a single `bool` value on the storage.
         value: bool,
     }
-    
+
     const COMMAND_LIST: [&str; 3] = ["set_dao_address", "add_proposal", "change_proposal_status"];
 
     impl ContractBase for Flipper {
@@ -71,12 +71,6 @@ mod flipper {
             command: String,
             vec_of_parameters: Vec<String>,
         ) -> core::result::Result<(), ContractBaseError> {
-            // match command.as_str() {
-            //     "set_dao_address" => self._set_dao_address(vec_of_parameters), // dao_coreへのインストールコマンドで必ず呼ぶ
-            //     "add_proposal" => self._add_proposal(vec_of_parameters),
-            //     "change_proposal_status" => self._change_proposal_status(vec_of_parameters),
-            //     _ => Err(ContractBaseError::CommnadNotFound),
-            // }
             Ok(())
         }
     }
